@@ -46,6 +46,16 @@
 					<integer>11</integer>
 				</dict>
 			</dict>
+			<key>2018-07-14.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>553257666.36183798</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>15</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
@@ -62,6 +72,9 @@
 		<array>
 			<string>2018-07-13-Docker.md</string>
 		</array>
+		<array>
+			<string>2018-07-14.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -70,7 +83,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>12</integer>
+			<integer>16</integer>
 		</dict>
 	</dict>
 </dict>

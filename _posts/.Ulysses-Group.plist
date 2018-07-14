@@ -36,12 +36,25 @@
 					<integer>7</integer>
 				</dict>
 			</dict>
+			<key>2018-07-14-解决了python版本兼容问题.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>553245424.55296302</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>11</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
 		<array>
 			<string>2018-07-13-init.md</string>
+		</array>
+		<array>
+			<string>2018-07-14-解决了python版本兼容问题.md</string>
 		</array>
 		<array>
 			<string>2018-07-13-init-blog.md</string>
@@ -57,7 +70,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>8</integer>
+			<integer>12</integer>
 		</dict>
 	</dict>
 </dict>

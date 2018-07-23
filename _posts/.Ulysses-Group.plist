@@ -56,12 +56,25 @@
 					<integer>15</integer>
 				</dict>
 			</dict>
+			<key>2018-07-23 nginx的部署.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>554033582.86304605</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>19</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
 		<array>
 			<string>2018-07-13-init.md</string>
+		</array>
+		<array>
+			<string>2018-07-23 nginx的部署.md</string>
 		</array>
 		<array>
 			<string>2018-07-14-解决了python版本兼容问题.md</string>
@@ -83,7 +96,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>16</integer>
+			<integer>20</integer>
 		</dict>
 	</dict>
 </dict>

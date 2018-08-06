@@ -9,11 +9,11 @@ description: 构建hadoop集群，配置无密码ssh登录。
 在构建hadoop时，需要配置节点之间的ssh登录，因此通过ssh-keygen生成密钥，将公钥配置到其他节点下的\~/.ssh/authorised\_keys,就可以实现对其他节点的无密码登录。期间主要用到了三个命令。
 
 
-1. ssh-keygen    #生成公钥和私钥
+1.  ssh-keygen    #生成公钥和私钥
 
-2. scp authorised_keys user@ip:/home/user/.ssh/  #在节点间传输文件
+2.  scp authorised\_keys user@ip:/home/user/.ssh/  #在节点间传输文件
 
-3. cat id_ras.pub \>\> authorised_keys   #将秘钥输出并且重定向到authorised_keys
+3.  cat id\_ras.pub \>\> authorised\_keys   #将秘钥输出并且重定向到authorised\_keys
 
 
 ## 策略

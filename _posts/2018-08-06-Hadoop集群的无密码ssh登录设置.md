@@ -4,7 +4,6 @@ title:  Hadoop集群的无密码ssh登录设置
 category: blog
 description: 构建hadoop集群，配置无密码ssh登录。
 ---
----- 
 ## ssh
 
 在构建hadoop时，需要配置节点之间的ssh登录，因此通过ssh-keygen生成密钥，将公钥配置到其他节点下的\~/.ssh/authorised\_keys,就可以实现对其他节点的无密码登录。期间主要用到了三个命令。

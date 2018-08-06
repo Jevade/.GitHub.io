@@ -48,22 +48,30 @@
 			</dict>
 			<key>2018-07-14.md</key>
 			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>555262707.44270599</real>
 				<key>lastModification</key>
-				<real>553257666.36183798</real>
+				<real>555262707.44270599</real>
 				<key>version</key>
 				<dict>
 					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-					<integer>15</integer>
+					<integer>21</integer>
 				</dict>
 			</dict>
 			<key>2018-07-23 nginx的部署.md</key>
 			<dict>
+				<key>explicitUnassignment</key>
+				<true/>
+				<key>firstUnassignment</key>
+				<real>555262707.44270098</real>
 				<key>lastModification</key>
-				<real>554033582.86304605</real>
+				<real>555262707.44270098</real>
 				<key>version</key>
 				<dict>
 					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-					<integer>19</integer>
+					<integer>21</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -96,7 +104,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 	</dict>
 </dict>

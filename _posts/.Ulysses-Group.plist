@@ -36,6 +36,16 @@
 					<integer>7</integer>
 				</dict>
 			</dict>
+			<key>2018-07-14-容器内传输文件以及安装jdk.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>555481982.32227099</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>23</integer>
+				</dict>
+			</dict>
 			<key>2018-07-14-解决了python版本兼容问题.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -74,6 +84,36 @@
 					<integer>21</integer>
 				</dict>
 			</dict>
+			<key>2018-07-23-nginx的部署.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>555481982.32227099</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>23</integer>
+				</dict>
+			</dict>
+			<key>2018-08-06-Hadoop集群的无密码ssh登录设置.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>555481982.32227194</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>23</integer>
+				</dict>
+			</dict>
+			<key>2018-08-09-Python的一些基础知识.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>555482014.95403302</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>24</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
@@ -96,6 +136,18 @@
 		<array>
 			<string>2018-07-14.md</string>
 		</array>
+		<array>
+			<string>2018-07-14-容器内传输文件以及安装jdk.md</string>
+		</array>
+		<array>
+			<string>2018-07-23-nginx的部署.md</string>
+		</array>
+		<array>
+			<string>2018-08-06-Hadoop集群的无密码ssh登录设置.md</string>
+		</array>
+		<array>
+			<string>2018-08-09-Python的一些基础知识.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -104,7 +156,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>21</integer>
+			<integer>25</integer>
 		</dict>
 	</dict>
 </dict>

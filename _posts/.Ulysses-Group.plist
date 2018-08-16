@@ -56,34 +56,6 @@
 					<integer>11</integer>
 				</dict>
 			</dict>
-			<key>2018-07-14.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>555262707.44270599</real>
-				<key>lastModification</key>
-				<real>555262707.44270599</real>
-				<key>version</key>
-				<dict>
-					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-					<integer>21</integer>
-				</dict>
-			</dict>
-			<key>2018-07-23 nginx的部署.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>555262707.44270098</real>
-				<key>lastModification</key>
-				<real>555262707.44270098</real>
-				<key>version</key>
-				<dict>
-					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-					<integer>21</integer>
-				</dict>
-			</dict>
 			<key>2018-07-23-nginx的部署.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -114,6 +86,16 @@
 					<integer>24</integer>
 				</dict>
 			</dict>
+			<key>2018-08-16-zookeeper的伪分布式搭建.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>556091944.26640296</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>30</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
@@ -122,7 +104,7 @@
 			<string>2018-07-13-init.md</string>
 		</array>
 		<array>
-			<string>2018-07-23 nginx的部署.md</string>
+			<string>2018-08-16-zookeeper的伪分布式搭建.md</string>
 		</array>
 		<array>
 			<string>2018-07-14-解决了python版本兼容问题.md</string>
@@ -132,9 +114,6 @@
 		</array>
 		<array>
 			<string>2018-07-13-Docker.md</string>
-		</array>
-		<array>
-			<string>2018-07-14.md</string>
 		</array>
 		<array>
 			<string>2018-07-14-容器内传输文件以及安装jdk.md</string>
@@ -156,7 +135,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>25</integer>
+			<integer>31</integer>
 		</dict>
 	</dict>
 </dict>

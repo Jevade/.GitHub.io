@@ -97,6 +97,8 @@
 				</dict>
 			</dict>
 		</dict>
+		<key>sheetOrder</key>
+		<real>556092116.83927095</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
@@ -128,6 +130,8 @@
 			<string>2018-08-09-Python的一些基础知识.md</string>
 		</array>
 	</array>
+	<key>sheetOrder</key>
+	<string>creationDate</string>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
 	<key>versioning</key>
@@ -136,6 +140,11 @@
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
 			<integer>31</integer>
+		</dict>
+		<key>sheetOrder</key>
+		<dict>
+			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>

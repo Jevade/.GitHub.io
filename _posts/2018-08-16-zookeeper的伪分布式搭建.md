@@ -8,4 +8,4 @@ tag: zookeeper,分布式搭建
 
 # zookeeper
 
-在
+下载zookeeper

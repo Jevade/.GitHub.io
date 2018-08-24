@@ -96,12 +96,25 @@
 					<integer>30</integer>
 				</dict>
 			</dict>
+			<key>2018-08-24-使用iso文件搭建本地源离线安装linux包.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>556780936.99699104</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>36</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>sheetOrder</key>
 		<real>556092116.83927095</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
+		<array>
+			<string>2018-08-24-使用iso文件搭建本地源离线安装linux包.md</string>
+		</array>
 		<array>
 			<string>2018-07-13-init.md</string>
 		</array>
@@ -139,7 +152,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>31</integer>
+			<integer>37</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

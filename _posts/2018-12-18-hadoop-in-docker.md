@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      hadoop，docker
+title:      容器中构建hadoop分布式环境
 category: blog
 description: 容器中构建hadoop分布式环境
 tag:hadoop ,linux，docker

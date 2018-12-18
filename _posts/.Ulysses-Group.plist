@@ -76,14 +76,14 @@
 					<integer>23</integer>
 				</dict>
 			</dict>
-			<key>2018-08-09-Python的一些基础知识.md</key>
+			<key>2018-08-09-类的一些基础知识.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>555482014.95403302</real>
+				<real>566831801.69386399</real>
 				<key>version</key>
 				<dict>
 					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-					<integer>24</integer>
+					<integer>56</integer>
 				</dict>
 			</dict>
 			<key>2018-08-16-zookeeper的伪分布式搭建.md</key>
@@ -166,7 +166,7 @@
 			<string>2018-08-06-Hadoop集群的无密码ssh登录设置.md</string>
 		</array>
 		<array>
-			<string>2018-08-09-Python的一些基础知识.md</string>
+			<string>2018-08-09-类的一些基础知识.md</string>
 		</array>
 	</array>
 	<key>sheetOrder</key>
@@ -178,7 +178,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>53</integer>
+			<integer>57</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

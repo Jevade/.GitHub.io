@@ -116,12 +116,25 @@
 					<integer>42</integer>
 				</dict>
 			</dict>
+			<key>2018-12-18-hadoop-in-docker.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>566830519.07620502</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>52</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>sheetOrder</key>
 		<real>556092116.83927095</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
+		<array>
+			<string>2018-12-18-hadoop-in-docker.md</string>
+		</array>
 		<array>
 			<string>2018-10-09-hadoop搭建全分布式环境的一些问题.md</string>
 		</array>
@@ -165,7 +178,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>43</integer>
+			<integer>53</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

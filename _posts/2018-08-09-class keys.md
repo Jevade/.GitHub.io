@@ -11,6 +11,7 @@ do some thing
 使用这种方式，会调用 STH类的 `def _enter_`方法，将方法的返回值赋给sth,之后再结束的时候，会自动调用 `def _exit_ `方法，实现资源的释放等操作。所以当自己编写类的时候，如果要自己控制内存资源，可以使用这两个方法，在enter方法中使用资源开辟，在exit方法中释放资源，并且在遇到类的内部错误退出是，调用exit方法可以打印出出错的信息。
 实际上，在with后面的代码块抛出异常时，exit()方法被执行。开发库时，清理资源，关闭文件等操作，都可以放在exit()方法中。
 with 语句适用于对资源进行访问的场合，确保不管使用过程中是否发生异常都会执行必要的“清理”操作，释放资源
+
 `try:`
 `do sonething 1`
 `expect: `
@@ -18,10 +19,13 @@ with 语句适用于对资源进行访问的场合，确保不管使用过程中
 `finally:`
 `do something 3`
 
+
 with :
 do somethong 1
 
 mac上brew出错
+
+
 `If you are facing an error like that on new MacOS version.`
 `xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun`
 
@@ -45,6 +49,7 @@ C++虚函数
 	virtual void foo() { cout \<\< "B::foo() is called" \<\< endl;}
 	};
 	
+
 那么，在使用的时候，我们可以：
 
 A \* a = new B();

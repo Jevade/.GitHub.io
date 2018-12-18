@@ -1,3 +1,3 @@
 【说明】
 
-这是[Jevade](http://jevade.top)博客实例代码。
+这是[Jevade](http://jevade.github.io)博客实例代码。

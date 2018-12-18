@@ -12,12 +12,12 @@ do some thing
 实际上，在with后面的代码块抛出异常时，exit()方法被执行。开发库时，清理资源，关闭文件等操作，都可以放在exit()方法中。
 with 语句适用于对资源进行访问的场合，确保不管使用过程中是否发生异常都会执行必要的“清理”操作，释放资源
 
-`try:`
-`do sonething 1`
-`expect: `
-`do something 2`
-`finally:`
-`do something 3`
+	try:
+	do sonething 1
+	expect: 
+	do something 2
+	finally:
+	do something 3
 
 
 with :
@@ -26,8 +26,8 @@ do somethong 1
 mac上brew出错
 
 
-`If you are facing an error like that on new MacOS version.`
-`xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun`
+	If you are facing an error like that on new MacOS version.
+	xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 
 
 

@@ -1,10 +1,13 @@
+
 ---
 layout:     post
 title:      容器中构建hadoop分布式环境
 category: blog
 description: 容器中构建hadoop分布式环境
-tag:hadoop ,linux，docker
+tag: hadoop ,linux，docker
 ---
+
+
 # 容器中构建hadoop分布式环境
 
 最近需要学习大数据实践，任课老师用的是基于VMware搭建多个虚拟机来实现的，虽然使用虚拟机可以只用链接克隆的方式搭建多个节点，但是对于我的乞丐版macbook来说，虚拟机还是大了，随便一个就需要2,30G的存储空间，而且多个虚拟机跑起来，风扇转的声音过于大了。因此考虑使用容器来构建多节点环境。

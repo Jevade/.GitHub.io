@@ -101,6 +101,7 @@ tag: hadoop ,linux，docker
 
 docker run 可以带参数，从而可以定义容易的属性
 
+
 	docker run -tid 
 	--name pbs3 # 定义容器名称
 	-h pbs3 #定义容器的host

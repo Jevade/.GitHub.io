@@ -89,6 +89,7 @@ tag: hadoop ,linux，docker
 	]
 
 可以看到自定义的网络下面已经有三个容器了，这是已经定义好的，将定义容器的语句写到脚本中。
+
 	docker run -tid --name pbs1 -h pbs1 --add-host pbs1:172.18.0.3 --add-host pbs2:172.18.0.4 --add-host pbs3:172.18.0.5 --net=mynetwork --ip=172.18.0.3 myhadoop
 	
 	docker run -tid --name pbs2 -h pbs2 --add-host pbs1:172.18.0.3 --add-host pbs2:172.18.0.4 --add-host pbs3:172.18.0.5 --net=mynetwork --ip=172.18.0.4 myhadoop
@@ -99,6 +100,7 @@ tag: hadoop ,linux，docker
 定义了三个hadoop容器和一个nginx容易，通过nginx反向代理访问hadoop的管理界面。
 
 docker run 可以带参数，从而可以定义容易的属性
+
 	docker run -tid 
 	--name pbs3 # 定义容器名称
 	-h pbs3 #定义容器的host

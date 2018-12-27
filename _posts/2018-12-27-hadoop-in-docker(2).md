@@ -8,13 +8,12 @@ tag: Hadoop ， linux，docker
 
 ## 数据库容器及Hive元数据存储配置
 
-承接上文，配置Hive的时候需要配置元数据存储，默认的是DERBY,由于通常使用的是Mysql，因此使用Mysql作为Hive元数据的存储数据库。元数据的存放有本地和远程两种模式。本地模式是指在于hive运行主机上安装数据库，直接通过localhost访问，远程模式是指使用远端的专门用于存储的主机，需要通过TCP链接。这里首先采用的远端模式。集群是通过容器搭建的，如果在运行hive的同时开启mysql后台运行的话需要配置--privilege 参数
+承接上文，配置Hive的时候需要配置元数据存储，默认的是DERBY,由于通常使用的是Mysql，因此使用Mysql作为Hive元数据的存储数据库。元数据的存放有本地和远程两种模式。本地模式是指在于hive运行主机上安装数据库，直接通过localhost访问，远程模式是指使用远端的专门用于存储的主机，需要通过TCP链接。这里首先采用的远端模式。集群是通过容器搭建的，如果在运行hive的同时开启mysql后台运行的话需要配置--privilege 参数。
 
 	# docker pull centos
 	# yum install mysql
 	# service start mysql
-	# yum install vsftpd
-	Failed to get D-Bus connection: Operation not permitted
+	#Failed to get D-Bus connection: Operation not permitted
 
 在容器中安装mysql,启动服务时会报错，无法获取D-Bus链接，这里的问题是在默认情况下，容器里面是不允许新开后台线程的。容器的设计理念是容器不运行后台服务，容器间基于相同的linux内核，容器可以看做是运行在宿主机上的一个独立的主进程，不同容器的区别可以说是这些主进程或者说容器内运行的应用进程不同。所以通常的做法是在容器里面运行前台进程。如果是在需要运行后台进程，就需要开启特权模式。需要改变容器的创建方式。
 
@@ -22,57 +21,53 @@ tag: Hadoop ， linux，docker
 
 `--privileged=true   `参数就指定容器以特权方式运行。之后就可以使用systemctl运行后台应用。当然也可以专门的Mysql容器.
 
-`#dokcer pull mysql  `
-镜像拉下来之后，运行容器。
+`#dokcer pull mysql  `镜像拉下来之后，运行容器。
 
 	docker run -itd  —name mysql -h hostname   —ip=ip   —add-host   master:172.18.0.3 -net=mysubnet   -p 3306:3306  mysql
 
 
-	-name mysql
-
-定义了容器的名称，使用docker ps的时候，会显示container的名字是mysql
+`-name mysql`定义了容器的名称，使用docker ps的时候，会显示container的名字是mysql。
 
 	-h hostname
-
-定义了容易的HOSTNAME
+定义了容易的HOSTNAME 。
 
 	—ip=MYSTATICIP
-
-定义了容器的静态IP地址，此时必需使用自定义网络
+定义了容器的静态IP地址，此时必需使用自定义网络。
 
 docker中关于自定义网络的命令有：
 
 	docker network create —subnet=172.18.0.0/16 mySunNet
 	docker network rmmySubNet
 
-宿主机与容器的端口映射，
+## 宿主机与容器的端口映射
+
 将容器的3306端口映射到宿主机的3396端口，之后通过 可以通过宿主机ip链接mysql容器，适合在mysql容器和hive容器不在同一docker network的时候。
 
 	-p 3306:3306
 
-之后需要设置数据库的远程连接，直接修改数据库mysql.user中对应用户的信息
+之后需要设置数据库的远程连接，直接修改数据库mysql.user中对应用户的信息。
 
 	GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
 	FLUSH RIVILEGES
 
-mysql 版本是8.0.13
+mysql 版本是8.0.13 。
 ![][image-1]
 
-之后使用远程连接时报错
+之后使用远程连接时报错。
 
 	error 2059: Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib64/mysql/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory
 
 这是因为最新版mysql-8.0.13默认的认证方式是`caching_sha2_password` ，而在MySQL5.7版本则为`mysql_native_password`。
 
 解决这个问题有两种方法
-1. 配置my.cnf并重启，并重启.
+1. 配置my.cnf并重启，并重启。
 
 	vim my.cnf
 	[mysqld]
 	default_authentication_plugin=mysql_native_password
 
 
-2. 改变对应用户的密码加密规则
+2. 改变对应用户的密码加密规则。
 
 	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root' PASSWORD EXPIRE NEVER; #修改加密规则 
 	'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
@@ -151,6 +146,7 @@ mysql 版本是8.0.13
 	15160-    <value/>
 	15161:    <description>URI to connect to the database (for example jdbc:mysql://hostname:port/DBName).</description>
 	15162-  </property>之后可以用sed命令替换文件中的相应字符。
+
 sed 替换
 
 `sed -i   s/oristr/newstr/g
@@ -223,7 +219,7 @@ sed 替换
 	[root@pbs1 ~]##
 
 
-这个默认路径写的是`"${system.java.io} ` 如果不修改的话，运行会报错，并且运行文件夹会生成一个文件。`${system:java.io.tmpdir}`
+这个默认路径写的是`"${system.java.io} ` 如果不修改的话，运行会报错，并且运行文件夹会生成一个文件。`${system:java.io.tmpdir}`。
 
 
 	[root@pbs1 ~]# ls
@@ -246,11 +242,11 @@ sed 替换
 	/usr/sbin/sshd
 	[root@pbs1 ~]# /usr/sbin/sshd
 
-容器构建的时候
+容器构建的时候：
 
 	docker run -itd  --name mysql -h hostname   --ip=MyIP   --add-host   master:172.18.0.3 -net=mysubnet   -p 1092:22  hadoop 
 
-将容器的22端口映射到宿主机的1092端口，就可以使用ssh远程连接容器
+将容器的22端口映射到宿主机的1092端口，就可以使用ssh远程连接容器：
 
 	ssh  root@10.90.226.189 -p 1092`
 	`➜  ~ ssh  root@10.90.226.189 -p 1092

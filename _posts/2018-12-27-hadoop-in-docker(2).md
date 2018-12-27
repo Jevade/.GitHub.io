@@ -61,9 +61,11 @@ mysql 版本是8.0.13 。
 解决这个问题有两种方法
 1. 配置my.cnf并重启，并重启。
 
+
 	vim my.cnf
 	[mysqld]
 	default_authentication_plugin=mysql_native_password
+
 
 
 2. 改变对应用户的密码加密规则。
@@ -71,12 +73,11 @@ mysql 版本是8.0.13 。
 	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root' PASSWORD EXPIRE NEVER; #修改加密规则 
 	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
 	FLUSH PRIVILEGES; #刷新权限
-	
 
  --创建新的用户：
 
 	mysql> create user root@'%' identified WITH mysql_native_password BY 'root';
-	mysql>grant all privileges on *.* to root@'%' with grant option;
+	mysql> grant all privileges on *.* to root@'%' with grant option;
 	mysql> flush privileges;
 
 --在MySQL8.0创建用户并授权的语句则不被支持：

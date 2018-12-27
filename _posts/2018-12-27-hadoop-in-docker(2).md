@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      容器中构建Hive,Spark以及Mysql设置
+title:      容器中构建Hive ， Spark以及Mysql设置
 category: blog
-description: 容器中,Hive,Spark,Mysql
-tag: Hadoop ,linux，docker
+description: 容器中， Hive ， Spark ， Mysql
+tag: Hadoop ， linux，docker
 ---
 
 # 数据库容器及Hive元数据存储配置

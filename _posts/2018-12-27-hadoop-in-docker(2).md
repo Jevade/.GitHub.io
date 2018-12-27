@@ -2,7 +2,7 @@
 layout:     post
 title:      容器中构建Hive ,Spark以及Mysql设置
 category: blog
-description: 容器中,Hive ,Spark ,Mysql
+description: 容器中配置Hive元数据存储数据库 ，以及Spark和Mysql的配置
 tag: Hadoop,linux,docker
 ---
 
@@ -259,6 +259,8 @@ sed 替换
 	Last login: Thu Dec 27 10:10:20 2018 from 172.18.0.1
 	-bash-4.2# bash
 	[root@pbs1 ~]#
+
+
 
 [^1]:	.
 

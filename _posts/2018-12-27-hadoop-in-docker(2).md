@@ -69,13 +69,18 @@ mysql 版本是8.0.13 。
 2. 改变对应用户的密码加密规则。
 
 	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root' PASSWORD EXPIRE NEVER; #修改加密规则 
-	'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
-	'FLUSH PRIVILEGES; #刷新权限
-	--创建新的用户：
-	create user root@'%' identified WITH mysql_native_password BY 'root';
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
+	FLUSH PRIVILEGES; #刷新权限
+	
+
+ --创建新的用户：
+
+	mysql> create user root@'%' identified WITH mysql_native_password BY 'root';
 	grant all privileges on *.* to root@'%' with grant option;
-	flush privileges;
-	--在MySQL8.0创建用户并授权的语句则不被支持：
+	mysql> flush privileges;
+
+--在MySQL8.0创建用户并授权的语句则不被支持：
+
 	mysql> grant all privileges on *.* to root@'%' identified by 'root' with grant option;
 	ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'identified by 'root' with grant option' at line 1
 

@@ -24,10 +24,11 @@ tag: Hadoop ,linux，docker
 `#dokcer pull mysql  `
 镜像拉下来之后，运行容器。
 
-```docker run -itd  --name mysql -h hostname   --ip=ip   --add-host   master:172.18.0.3 -net=mysubnet   -p 3306:3306  mysql`
+	docker run -itd  —name mysql -h hostname   —ip=ip   —add-host   master:172.18.0.3 -net=mysubnet   -p 3306:3306  mysql
 
-`-name mysql 
-`
+
+-name mysql 
+
 定义了容器的名称，使用docker ps的时候，会显示container的名字是mysql
 
 `-h hostname
@@ -40,14 +41,14 @@ tag: Hadoop ,linux，docker
 
 docker中关于自定义网络的命令有：
 
-```docker network create --subnet=172.18.0.0/16 mySunNet
-````docker network rmmySubNet`
+	docker network create —subnet=172.18.0.0/16 mySunNet
+	docker network rmmySubNet
 
 宿主机与容器的端口映射，
 将容器的3306端口映射到宿主机的3396端口，之后通过 可以通过宿主机ip链接mysql容器，适合在mysql容器和hive容器不在同一docker network的时候。
 
-`-p 3306:3306
-`
+	-p 3306:3306
+
 之后需要设置数据库的远程连接，直接修改数据库mysql.user中对应用户的信息
 
 	GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
@@ -58,7 +59,7 @@ mysql 版本是8.0.13
 
 之后使用远程连接时报错
 
-	`error 2059: Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib64/mysql/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory
+	error 2059: Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/lib64/mysql/plugin/caching_sha2_password.so: cannot open shared object file: No such file or directory
 
 这是因为最新版mysql-8.0.13默认的认证方式是`caching_sha2_password` ，而在MySQL5.7版本则为`mysql_native_password`。
 
@@ -85,10 +86,12 @@ mysql 版本是8.0.13
 	
 
 之后需要修改Hive,spark中的hive-site.xml文件，新下载的软件包中通常没有这个文件，有hive-site.xml.template 文件，可以修改为hive-site.xml，在其中添加配置项目。
-	hive-site.xml
-查询目录下存在的所有文件 
 
-`find  /  -name hive-site.xml|xargs cat|grep -A 1 -n mysql`
+	hive-site.xml
+
+查询目录下存在的所有文件 。
+
+	find  /  -name hive-site.xml|xargs cat|grep -A 1 -n mysql
 
 查询所有` hive-site.xml `文件中存在的包含mysql的行，并显示所在行后一行和所在行号。
 ![][image-2]
@@ -249,7 +252,7 @@ sed 替换
 
 将容器的22端口映射到宿主机的1092端口，就可以使用ssh远程连接容器
 
-	ssh  root@10.90.226.189 -p 1092
+	ssh  root@10.90.226.189 -p 1092`
 	`➜  ~ ssh  root@10.90.226.189 -p 1092
 	root@10.90.226.189's password:
 	Last login: Thu Dec 27 10:10:20 2018 from 172.18.0.1

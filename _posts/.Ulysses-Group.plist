@@ -126,12 +126,25 @@
 					<integer>52</integer>
 				</dict>
 			</dict>
+			<key>2018-12-27-hadoop-in-docker.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>567569065.60528803</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>62</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>sheetOrder</key>
 		<real>556092116.83927095</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
+		<array>
+			<string>2018-12-27-hadoop-in-docker.md</string>
+		</array>
 		<array>
 			<string>2018-12-18-hadoop-in-docker.md</string>
 		</array>
@@ -178,7 +191,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>59</integer>
+			<integer>63</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

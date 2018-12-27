@@ -21,3 +21,18 @@ tag: Hadoop ,linux，docker
 `--privileged=true   `参数就指定容器以特权方式运行。之后就可以使用systemctl运行后台应用。当然也可以专门的Mysql容器.
 
 `#dokcer pull mysql  `
+镜像拉下来之后，运行容器。
+```docker run -itd  --name mysql -h hostname   --ip=ip   --add-host   master:172.18.0.3 -net=mysubnet   mysql
+`-name mysql 
+定义了容器的名称，使用docker ps的时候，会显示container的名字是mysql,
+-h hostname
+定义了容易的HOSTNAME，
+--ip=ip
+定义了容器的静态IP地址，此时必需使用自定义网络，
+docker中创建自定义网络的命令是
+docker network 
+
+之后需要设置数据库的远程连接，直接修改数据库mysql.user中对应用户的信息就可以啦，
+```GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;`
+```FLUSH RIVILEGES`
+

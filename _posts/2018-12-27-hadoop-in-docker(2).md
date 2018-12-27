@@ -76,7 +76,7 @@ mysql 版本是8.0.13 。
  --创建新的用户：
 
 	mysql> create user root@'%' identified WITH mysql_native_password BY 'root';
-	grant all privileges on *.* to root@'%' with grant option;
+	mysql>grant all privileges on *.* to root@'%' with grant option;
 	mysql> flush privileges;
 
 --在MySQL8.0创建用户并授权的语句则不被支持：

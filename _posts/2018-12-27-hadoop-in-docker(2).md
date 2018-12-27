@@ -6,7 +6,8 @@ description: 容器中， Hive ， Spark ， Mysql
 tag: Hadoop ， linux，docker
 ---
 
-# 数据库容器及Hive元数据存储配置
+## 数据库容器及Hive元数据存储配置
+
 承接上文，配置Hive的时候需要配置元数据存储，默认的是DERBY,由于通常使用的是Mysql，因此使用Mysql作为Hive元数据的存储数据库。元数据的存放有本地和远程两种模式。本地模式是指在于hive运行主机上安装数据库，直接通过localhost访问，远程模式是指使用远端的专门用于存储的主机，需要通过TCP链接。这里首先采用的远端模式。集群是通过容器搭建的，如果在运行hive的同时开启mysql后台运行的话需要配置--privilege 参数
 
 	# docker pull centos
@@ -27,16 +28,16 @@ tag: Hadoop ， linux，docker
 	docker run -itd  —name mysql -h hostname   —ip=ip   —add-host   master:172.18.0.3 -net=mysubnet   -p 3306:3306  mysql
 
 
--name mysql 
+	-name mysql
 
 定义了容器的名称，使用docker ps的时候，会显示container的名字是mysql
 
-`-h hostname
-`
+	-h hostname
+
 定义了容易的HOSTNAME
 
-`--ip=MYSTATICIP
-`
+	—ip=MYSTATICIP
+
 定义了容器的静态IP地址，此时必需使用自定义网络
 
 docker中关于自定义网络的命令有：
@@ -69,21 +70,20 @@ mysql 版本是8.0.13
 	vim my.cnf
 	[mysqld]
 	default_authentication_plugin=mysql_native_password
-	
+
 
 2. 改变对应用户的密码加密规则
 
 	ALTER USER 'root'@'localhost' IDENTIFIED BY 'root' PASSWORD EXPIRE NEVER; #修改加密规则 
-	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
-	FLUSH PRIVILEGES; #刷新权限
-		--创建新的用户：
-		create user root@'%' identified WITH mysql_native_password BY 'root';
-		grant all privileges on *.* to root@'%' with grant option;
-		flush privileges;
-		--在MySQL8.0创建用户并授权的语句则不被支持：
-		mysql> grant all privileges on *.* to root@'%' identified by 'root' with grant option;
-	        ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'identified by 'root' with grant option' at line 1
-	
+	'ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; #更新一下用户的密码 
+	'FLUSH PRIVILEGES; #刷新权限
+	--创建新的用户：
+	create user root@'%' identified WITH mysql_native_password BY 'root';
+	grant all privileges on *.* to root@'%' with grant option;
+	flush privileges;
+	--在MySQL8.0创建用户并授权的语句则不被支持：
+	mysql> grant all privileges on *.* to root@'%' identified by 'root' with grant option;
+	ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'identified by 'root' with grant option' at line 1
 
 之后需要修改Hive,spark中的hive-site.xml文件，新下载的软件包中通常没有这个文件，有hive-site.xml.template 文件，可以修改为hive-site.xml，在其中添加配置项目。
 
@@ -170,7 +170,7 @@ sed 替换
 	./apache-hive-2.3.0-bin/lib/mysql-connector-java-8.0.13.jar
 
 
-# 修改hive任务记录的默认文件夹
+## 修改hive任务记录的默认文件夹
 
 	[root@pbs1 ~]# find / -name hive-site.xml|xargs cat |grep -B 1 -A 1 -n '/root/tmp/'
 	74-    <name>hive.exec.local.scratchdir</name>
@@ -238,7 +238,7 @@ sed 替换
 	mkdir -p  /root/tmp
 	chmod  -R 755 /root/tmp
 
-# 通过SSH连接局域网内windows主机上的安装的docker容器实例
+## 通过SSH连接局域网内windows主机上的安装的docker容器实例
 
 由于服务器是安装的Windows,所以在构建容器的时候讲宿主机的端口映射到容器的22端口，在容器内安装openssh,运行sshd,通常在命令行手动运行sshd 需要指明全路径。
 

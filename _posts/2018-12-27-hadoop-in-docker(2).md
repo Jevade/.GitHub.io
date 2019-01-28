@@ -85,6 +85,10 @@ mysql 版本是8.0.13 。
 	mysql> grant all privileges on *.* to root@'%' identified by 'root' with grant option;
 	ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'identified by 'root' with grant option' at line 1
 
+修改用户的默认加密方式
+        
+	ALTER USER 'username'@'ip_address' IDENTIFIED WITH mysql_native_password BY 'password';
+	
 之后需要修改Hive,spark中的hive-site.xml文件，新下载的软件包中通常没有这个文件，有hive-site.xml.template 文件，可以修改为hive-site.xml，在其中添加配置项目。
 
 	hive-site.xml

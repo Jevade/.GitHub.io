@@ -136,12 +136,25 @@
 					<integer>64</integer>
 				</dict>
 			</dict>
+			<key>2019-2-288-mysql的数据增量恢复.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>573039803.831249</real>
+				<key>version</key>
+				<dict>
+					<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
+					<integer>70</integer>
+				</dict>
+			</dict>
 		</dict>
 		<key>sheetOrder</key>
 		<real>556092116.83927095</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
+		<array>
+			<string>2019-2-288-mysql的数据增量恢复.md</string>
+		</array>
 		<array>
 			<string>2018-12-27-hadoop-in-docker(2).md</string>
 		</array>
@@ -191,7 +204,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>69b9a9519a6df1520ace36a5f9cad9369d3c1b4855d0103aff10dc7e9a3730fa</key>
-			<integer>65</integer>
+			<integer>71</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

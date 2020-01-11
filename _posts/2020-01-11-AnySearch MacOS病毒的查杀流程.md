@@ -25,21 +25,28 @@ tag: AnySearch ，Mac OS，病毒，浏览器
 	sh-3.2# kill -9 70679 70692 70811 70998 71265 71506 71686 71868 72051 72170
 
 
-重新搜索，发现没有在运行了，
+重新搜索，发现没有在运行了
+
 	sh-3.2# ps -ef|grep MajorLetterSearc
 	0 72502 71290   0  4:30PM ttys001    0:00.00 grep MajorLetterSearc
+	
 查看病毒执行文件目录，藏得还很隐蔽
+
 	sh-3.2# cat  /var/root/.MajorLetterSearch/MajorLetterSearch
 	MajorLetterSearch     MajorLetterSearch.py
 
 取消病毒文件的执行权限
-	sh-3.2# chmod -x   /var/root/.MajorLetterSearch/*
-	
+
+
+	sh-3.2# chmod -x   /var/root/.MajorLetterSearch/*	
 	sh-3.2# ls -al  /var/root/.MajorLetterSearch/*
 	-rw-------  1 root  wheel  12096424 Jan 11 16:28 /var/root/.MajorLetterSearch/MajorLetterSearch
 	-rw-------  1 root  wheel      9592 Jan 11 16:28 /var/root/.MajorLetterSearch/MajorLetterSearch.py
 
+
 把病毒文件复制打包保存，然后删除原始病毒文件
+
+
 	sh-3.2# tar -cvf  MajorLetterSearch.tar /var/root/.MajorLetterSearch
 	tar: Removing leading '/' from member names
 	a var/root/.MajorLetterSearch
@@ -50,6 +57,8 @@ tag: AnySearch ，Mac OS，病毒，浏览器
 	sh-3.2# rm -rf /var/root/.MajorLetterSearch
 
 然后删除相关的配置文件，使用find全盘查找病毒相关文件
+
+
 	sh-3.2# find / -name  MajorLetterSearch
 	/Library/Application Support/com.MajorLetterSearchDaemon/MajorLetterSearch
 	find: /System/Volumes/Data/.Spotlight-V100: No such file or directory

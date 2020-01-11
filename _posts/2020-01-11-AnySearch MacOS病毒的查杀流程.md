@@ -32,7 +32,7 @@ tag: AnySearch ，Mac OS，病毒，浏览器
 	
 查看病毒执行文件目录，藏得还很隐蔽
 
-	sh-3.2# cat  /var/root/.MajorLetterSearch/MajorLetterSearch
+	sh-3.2# ls  /var/root/.MajorLetterSearch/MajorLetterSearch
 	MajorLetterSearch     MajorLetterSearch.py
 
 取消病毒文件的执行权限

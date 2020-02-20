@@ -5,7 +5,7 @@ category: blog
 description: AnySearch ，Mac OS，病毒，浏览器
 tag: AnySearch ，Mac OS，病毒，浏览器
 ---
-新年伊始，跟了我两三年的macbook pro开始出现各种问题，卡顿闪退，内存爆满，最后连VS Code打开都卡卡顿顿，是不是来个无服务。然后chrome浏览器的默认搜索都变成一个Any Search的奇葩东西，我要的是我的duckduckgo,要你这2B玩意儿干啥，反复修改了好几次默认搜索引擎，没过多久又死灰复燃，然后Chrome浏览器设置最下一行，出现“由贵单位管理”。我的浏览器被劫持了。。。。。
+新年伊始，跟了我两三年的macbook pro开始出现各种问题，卡顿闪退，内存爆满，最后连VS Code打开都卡卡顿顿，时不时来个无服务。然后chrome浏览器的默认搜索都变成一个Any Search的奇葩东西，我要的是我的duckduckgo,要你这2B玩意儿干啥，反复修改了好几次默认搜索引擎，没过多久又死灰复燃，然后Chrome浏览器设置最下一行，出现“由贵单位管理”。我的浏览器被劫持了。。。。。
 网上一搜，发现还挺多这种问题的，是AnySearch的变种，我这里叫做MajorLetterSearch。
 流程
 杀死进程
